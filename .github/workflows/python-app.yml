@@ -16,6 +16,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      MY_DATABASE: ${{secrets.MY_DATABASE_KEY}}
 
     steps:
     - uses: actions/checkout@v4
@@ -32,3 +34,5 @@ jobs:
       run: ruff check InventarioAutos.py
     - name: Type check with mypy
       run: mypy --strict InventarioAutos.py
+    - name: Ejecutando pruebas
+      run: Echo Ejecutanto secretos $MY_DATABASE_KEY
