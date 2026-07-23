@@ -18,6 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       MY_DATABASE: ${{secrets.MY_DATABASE_KEY}}
+      VARIABLE: ${{vars.VARIABLE}}
 
     steps:
     - uses: actions/checkout@v4
@@ -35,4 +36,6 @@ jobs:
     - name: Type check with mypy
       run: mypy --strict InventarioAutos.py
     - name: Ejecutando pruebas
-      run: Echo Ejecutanto secretos $MY_DATABASE_KEY
+      run: echo Ejecutanto secretos $MY_DATABASE_KEY
+    - name: Ejecutando variable
+      run: echo Ejecutanto  variable $VARIABLE
