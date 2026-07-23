@@ -1,5 +1,4 @@
 import json
-import os
 
 class Vehiculo():
     def __init__(self, marca, modelo, kilometraje, precio, patente):
