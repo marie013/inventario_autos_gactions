@@ -43,14 +43,14 @@ class GestorVehiculo:
             json.dump(guardar, f, indent=4, ensure_ascii=False)
         print("Datos guardados con éxito")
 
-    def cargar_vehiculo(self):
-        if not os.path.exists(self.archivo):
-            return []
-        with open(self.archivo, "r", encoding="utf-8") as f:
-            #guardar = json.load(f)
+    # def cargar_vehiculo(self):
+    #     if not os.path.exists(self.archivo):
+    #         return []
+    #     with open(self.archivo, "r", encoding="utf-8") as f:
+    #         #guardar = json.load(f)
 
-            objeto_vehiculo= Vehiculo.from_dict_vehiculo
-            return objeto_vehiculo   
+    #         objeto_vehiculo= Vehiculo.from_dict_vehiculo
+    #         return objeto_vehiculo   
     
 """======= MENU =======
 1. Agregar vehiculo
