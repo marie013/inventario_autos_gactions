@@ -47,7 +47,7 @@ class GestorVehiculo:
         if not os.path.exists(self.archivo):
             return []
         with open(self.archivo, "r", encoding="utf-8") as f:
-            guardar = json.load(f)
+            #guardar = json.load(f)
 
             objeto_vehiculo= Vehiculo.from_dict_vehiculo
             return objeto_vehiculo   
